@@ -3,5 +3,6 @@
 @section('title', 'Worship Events')
 
 @section('content')
-    <img src="/img/banner.jpg" alt="banner">
+    <img id="banner" src="/img/banner.jpg" alt="banner">
+
 @endsection

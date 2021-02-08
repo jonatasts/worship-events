@@ -14,29 +14,5 @@
     "laravel-mix": "^6.0.6",
     "lodash": "^4.17.19",
     "postcss": "^8.1.14"
-  },
-  "name": "worship-events",
-  "description": "",
-  "version": "1.0.0",
-  "main": "webpack.mix.js",
-  "directories": {
-    "test": "tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jonatasts/worship-events.git"
-  },
-  "keywords": [
-    "Worship",
-    "Events"
-  ],
-  "author": "Jônatas Santos",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jonatasts/worship-events/issues"
-  },
-  "homepage": "https://github.com/jonatasts/worship-events#readme",
-  "dependencies": {
-    "bootstrap": "^4.6.0"
   }
 }
