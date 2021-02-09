@@ -22,7 +22,7 @@
                     <div class="card-date">09/02/2021</div>
                     <div class="card-title">{{$event->title}}</div>
                     <div class="card-participants">X Participantes</div>
-                    <a href="" class="btn btn-danger btn-more">Saber mais</a>
+                    <a href="" class="btn btn-outline-warning btn-more ">Saber mais</a>
                 </div>
             </div>        
         @endforeach   

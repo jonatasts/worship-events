@@ -27,7 +27,7 @@
 <body class="antialiased">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="collapse navbar-collapse" id="navbar">
+            <div class="collapse navbar-collapse justify-content-between" id="navbar">
                 <a href="/" class="navbar-brand">
                     <img src="/img/worship-events_logo.png" alt="Worship Events">
                 </a>

@@ -21,13 +21,14 @@ header {
 }
 
 .btn-more {
-    background-color: #F2A340;
-    border: 2px solid #C28008;
+    border-color: #F2A340;
+    color: #F2A340;
+    font-weight: 600;
 }
 
 .btn-more:hover {
-    background-color: #C28008;
-    border-color: #C28008;
+    background-color: #F2A340;
+    color: #FFF;
 }
 
 /*Navbar*/
@@ -47,7 +48,7 @@ header {
 }
 
 #navbar a {
-    font-size: 14px;
+    font-size: 17px;
     color: #757575;
 }
 
