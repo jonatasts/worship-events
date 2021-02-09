@@ -7,6 +7,9 @@
 
     <title>@yield('title')</title>
 
+    <!--Icone da Aba-->
+    <link rel="icon" href="/img/worship-events_logo.png">
+
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
