@@ -18,6 +18,7 @@
 
     <!--Node Modules Scripts-->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/ionicons/dist/ionicons.js"></script>
 
     <!--Scripts-->
     <script src="/js/scripts.js"></script>
@@ -36,7 +37,7 @@
                         <a href="/" class="nav-link">Evento</a>
                     </li>
                     <li class="nav-item">
-                        <a href="/" class="nav-link">Criar Evento</a>
+                        <a href="/events/create" class="nav-link">Criar Evento</a>
                     </li>
                     <li class="nav-item">
                         <a href="/" class="nav-link">Entrar</a>
