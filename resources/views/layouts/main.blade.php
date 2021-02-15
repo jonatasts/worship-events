@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 
     <!--Node Modules Scripts-->
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="/node_modules/ionicons/dist/ionicons.js"></script>
 
@@ -30,11 +31,15 @@
 <body class="antialiased">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="collapse navbar-collapse justify-content-between" id="navbar">
-                <a href="/" class="navbar-brand">
-                    <img src="/img/worship-events_logo.png" alt="Worship Events">
-                </a>
+            <a href="/" class="navbar-brand">
+                <img src="/img/worship-events_logo.png" alt="Worship Events">
+            </a>
 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a href="/" class="nav-link">Evento</a>

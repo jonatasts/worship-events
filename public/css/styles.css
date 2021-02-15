@@ -39,21 +39,36 @@ header {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
 }
 
-#navbar img {
+.navbar-brand img{
     width: 70px;
 }
 
-#navbar .nav-item {
+#navbarNavDropdown .nav-item {
     font-weight: 700;
 }
 
-#navbar a {
+#navbarNavDropdown a {
     font-size: 17px;
     color: #757575;
 }
 
-#navbar a:hover {
+#navbarNavDropdown a:hover {
     color: #F2A340;
+}
+
+/*Create Container*/
+
+#event-create-container .label-create {
+    font-weight: 700;
+}
+
+#event-create-container button[type=submit] {
+    color: #FFF;
+    font-weight: 500;
+}
+
+#event-create-container h1 {
+    margin-top: 30px;
 }
 
 /*Search Container*/
