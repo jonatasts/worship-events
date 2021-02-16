@@ -156,6 +156,10 @@ header {
     margin-top: 2px;
 }
 
+#description-container {
+    margin-top: 30px;
+}
+
 /*Search Container*/
 
 #search-container {
@@ -228,6 +232,25 @@ header {
     font-size: 14px;
     color: #757575;
 }
+
+/* Dashboard */
+.dashboard-title-container {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.dashboard-events-container th {
+  width: 25%;
+}
+
+.dashboard-events-container form {
+  display: inline-block;
+}
+
+.dashboard-events-container .btn {
+    height: 33px;
+}
+
 
 /*Footer*/
 

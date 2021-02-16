@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', '$event->title')
+@section('title', $event->title)
 
 @section('content')
 
@@ -13,7 +13,7 @@
         <h1>{{ $event->title }}</h1>
         <p class="event-city"><ion-icon name="location-outline"></ion-icon> {{ $event->city }}</p>
         <p class="events-participants"><ion-icon name="people-outline"></ion-icon> X Participantes</p>
-        <p class="event-owner"><ion-icon name="star-outline"></ion-icon> Dono do Evento</p>
+        <p class="event-owner"><ion-icon name="star-outline"></ion-icon>{{ $event_owner['name'] }}</p>
         <a href="#" class="btn btn-warning" style="background-color: #F2A340" id="confirm-presence">Confirmar Presença</a>
 
         @if ($event->items)

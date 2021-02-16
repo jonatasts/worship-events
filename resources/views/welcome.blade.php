@@ -21,7 +21,7 @@
 <div id="events-container" class="col-md-12">
         @if ($search)
             <h2>Buscando por: <em>{{ $search }}</em></h2>
-        @else
+        @elseif (count($events) != 0)
             <h2>Próximos Eventos</h2>
             <p class="subtitle">Veja os eventos dos próximos dias</p>
         @endif
@@ -42,9 +42,11 @@
             @if(count($events) == 0 && $search)
                 <p>Não foi possível encontrar nenhum evento com "<strong><em>{{ $search }}</em></strong>". <a href="/">Ver todos</a></p>
             @elseif(count($events) == 0)
+            <div class="col-md-12">
                 <h2>Não há eventos disponiveis!</h2>
                 <a href="/events/create" class="btn btn-outline-warning btn-more ">Crie um evento</a>
+            </div>
             @endif
         </div>
-</div> 
+    </div> 
 @endsection
