@@ -5,9 +5,10 @@
 @section('content')
 <div id="search-container" class="col-md-12">
     <h1>Busque por um evento gospel</h1>
-    <form action="" method="get">
+    <form action="/" method="GET">
+        @csrf
         <div class="input-group">
-            <input required class="form-control py-2 border-right-0 border" type="search" id="search" placeholder="Procurar...">
+            <input required class="form-control py-2 border-right-0 border" type="search" id="search" name="search" placeholder="Procurar...">
             <span class="input-group-append">
                 <button class="btn btn-submit border-left-0 border" type="submit">
                     <i class="fa fa-search"></i>
@@ -18,12 +19,12 @@
 </div> 
 
 <div id="events-container" class="col-md-12">
-    @if (count($events) == 0)
-    <h2>Não há eventos disponiveis!</h2>
-    <a href="/events/create" class="btn btn-outline-warning btn-more ">Crie um evento</a>
-    @else
-        <h2>Próximos Eventos</h2>
-        <p class="subtitle">Veja os eventos dos próximos dias</p>
+        @if ($search)
+            <h2>Buscando por: <em>{{ $search }}</em></h2>
+        @else
+            <h2>Próximos Eventos</h2>
+            <p class="subtitle">Veja os eventos dos próximos dias</p>
+        @endif
 
         <div id="cards-container" class="row">
             @foreach($events as $event)
@@ -37,7 +38,13 @@
                 </div>
             </div>
             @endforeach
+
+            @if(count($events) == 0 && $search)
+                <p>Não foi possível encontrar nenhum evento com "<strong><em>{{ $search }}</em></strong>". <a href="/">Ver todos</a></p>
+            @elseif(count($events) == 0)
+                <h2>Não há eventos disponiveis!</h2>
+                <a href="/events/create" class="btn btn-outline-warning btn-more ">Crie um evento</a>
+            @endif
         </div>
-    @endif
 </div> 
 @endsection
