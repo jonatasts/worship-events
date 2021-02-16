@@ -6,10 +6,18 @@
 <div id="event-create-container" class="col-md-6 offset-md-3">
     <h1>Crie um evento</h1>
     
-    <form action="/events" method="POST">
+    <form action="/events" method="POST" enctype="multipart/form-data">
         @csrf
+        <p class="label-create">Imagem</p>
+        <div class="form-group input-group">
+            <div class="custom-file">
+                <input type="file" class="custom-file-input field-create" id="myInput" name="image" aria-describedby="myInput">
+                <label class="custom-file-label" for="myInput">Selecione a imagem do evento...</label>
+            </div>
+        </div>
+
         <div class="form-group">
-            <label for="title" class="label-create">Evento</label>
+            <label for="title" class="label-create">Título</label>
             <input required type="text" name="title" id="title" class="form-control field-create">
         </div>
 
@@ -61,5 +69,11 @@
         else
             $("button[type=submit]").attr("disabled", true)
     }
+
+    document.querySelector('.custom-file-input').addEventListener('change',function(e){
+        var fileName = document.getElementById("myInput").files[0].name;
+        var nextSibling = e.target.nextElementSibling
+        nextSibling.innerText = fileName
+    });
 </script>
 @endsection

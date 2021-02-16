@@ -69,6 +69,10 @@ header {
 
 /*Event Create page*/
 
+#event-create-container {
+    margin-bottom: 20px;
+}
+
 #event-create-container .label-create {
     font-weight: 700;
 }
@@ -85,6 +89,10 @@ header {
 
 #event-create-container h1 {
     margin-top: 30px;
+}
+
+#event-create-container .custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Procurar";
 }
 
 /*Search Container*/
@@ -109,7 +117,7 @@ header {
     margin: 0 auto;
 }
 
-/*Events List*/
+/* Events list */
 
 #events-container {
     padding: 50px;
@@ -124,11 +132,16 @@ header {
     margin-bottom: 30px;
 }
 
+#cards-container {
+    display: flex;
+}
+
 #events-container .card {
-    min-width: 260px;
+    flex: 1 1 24%;
+    max-width: 25%;
     border-radius: 10px;
     padding: 0;
-    margin: 12px;
+    margin: .5%;
 }
 
 #events-container img {
@@ -144,17 +157,15 @@ header {
 }
 
 .card .card-title {
-    font-size: 20px;
     color: #212121;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .card-participants {
     font-size: 14px;
     color: #757575;
-    margin-bottom: 15px;
-    font-weight: 600;
 }
 
 /*Footer*/
