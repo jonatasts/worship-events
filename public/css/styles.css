@@ -102,7 +102,7 @@ header {
     margin-top: 30px;
 }
 
-#event-create-container .custom-file-input:lang(en)~.custom-file-label::after {
+.custom-file-input:lang(en)~.custom-file-label::after {
     content: "Procurar";
 }
 
@@ -234,23 +234,36 @@ header {
 }
 
 /* Dashboard */
+
 .dashboard-title-container {
-  margin-bottom: 30px;
-  margin-top: 30px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .dashboard-events-container th {
-  width: 25%;
+    width: 25%;
 }
 
 .dashboard-events-container form {
-  display: inline-block;
+    display: inline-block;
 }
 
 .dashboard-events-container .btn {
     height: 33px;
 }
 
+.dashboard-events-container .edit-btn .icon-inner svg>title:before {
+    content: "Editar";
+}
+
+.dashboard-events-container .delete-btn .icon-inner svg>title:before {
+    content: 'Excluir';
+}
+
+.img-preview {
+    width: 100px;
+    margin-top: 20px;
+  }
 
 /*Footer*/
 

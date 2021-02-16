@@ -50,7 +50,7 @@
 
         <div class="form-group">
             <label for="description" class="label-create">Descrição</label>
-            <textarea required id="description" name="description" rows="4" class="form-control field-create" style="resize: none"></textarea>
+            <textarea required id="description" name="description" rows="4" class="form-control field-create" style="resize: none" placeholder="O que vai acontecer no evento?"></textarea>
         </div>
 
         <div class="form-group">
@@ -93,7 +93,7 @@
 
     document.querySelector('.custom-file-input').addEventListener('change',function(e){
         var fileName = document.getElementById("myInput").files[0].name;
-        var nextSibling = e.target.nextElementSibling
+        var nextSibling = e.target.nextElementSibling;
         nextSibling.innerText = fileName
     });
 </script>
