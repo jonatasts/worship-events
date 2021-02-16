@@ -58,10 +58,30 @@
         </nav>
     </header>
 
-    @yield('content')
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                @if (session('success'))
+                    <div class="msg alert alert-success">{{session('success')}}</div>
+                @elseif (session('errors'))
+                    <div class="msg alert alert-danger">{{session('errors')}}</div>
+                @endif
+                @yield('content')
+            </div>
+        </div>
+    </main>
     <footer>
         <p>Worship Events &copy; {{date('Y')}}</p>
     </footer>
+
+    <!--Oculta a msg de erro ou sucesso dps de 1.9 segundo-->
+    <script>
+        $().ready(function() {
+            setTimeout(function() {
+                $('.alert').remove();
+            }, 1900); // O valor é representado em milisegundos.
+        });
+    </script>
 </body>
 
 </html>

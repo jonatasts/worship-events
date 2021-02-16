@@ -14,9 +14,9 @@
     <h2>Próximos Eventos</h2>
     <p>Veja os eventos dos próximos dias</p>
             
-    <div id="cards-container" class="row">
+    <div id="cards-container" class="row d-flex justify-content-md-start">
         @foreach ($events as $event)
-            <div class="card col-md-3">
+            <div class="card col-md-2 col-sm-4">
                 <img src="/img/banner.jpg" alt="{{$event->title}}">
                 <div class="card-body">
                     <div class="card-date">09/02/2021</div>
