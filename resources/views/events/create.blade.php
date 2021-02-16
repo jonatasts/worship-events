@@ -22,6 +22,11 @@
         </div>
 
         <div class="form-group">
+            <label for="date">Data</label>
+            <input type="date" class="form-control" id="date" name="date">
+          </div>
+
+        <div class="form-group">
             <label for="city" class="label-create">Cidade</label>
             <input required type="text" name="city" id="city" class="form-control field-create">
         </div>
@@ -46,6 +51,22 @@
         <div class="form-group">
             <label for="description" class="label-create">Descrição</label>
             <textarea required id="description" name="description" rows="4" class="form-control field-create" style="resize: none"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="label-create" for="title">Itens de infraestrutura</label>
+            <div class="form-group">	
+              <input type="checkbox" name="items[]" value="Cadeiras"> Cadeiras
+            </div>
+            <div class="form-group">	
+              <input type="checkbox" name="items[]" value="Palco"> Palco
+            </div>
+            <div class="form-group">	
+              <input type="checkbox" name="items[]" value="Open Food"> Open food
+            </div>
+            <div class="form-group">	
+              <input type="checkbox" name="items[]" value="Brindes"> Brindes
+            </div>
         </div>
 
         <button disabled type="submit" class="btn btn-warning" style="background-color: #F2A340">Criar Evento</button>
