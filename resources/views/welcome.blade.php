@@ -6,7 +6,14 @@
 <div id="search-container" class="col-md-12">
     <h1>Busque por um evento gospel</h1>
     <form action="" method="get">
-        <input type="text" id="seach" class="form-control" placeholder="Procurar...">
+        <div class="input-group">
+            <input required class="form-control py-2 border-right-0 border" type="search" id="search" placeholder="Procurar...">
+            <span class="input-group-append">
+                <button class="btn btn-submit border-left-0 border" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
     </form>
 </div> 
 

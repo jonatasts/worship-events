@@ -31,6 +31,17 @@ header {
     color: #FFF;
 }
 
+.btn-submit.form-control:focus {
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
+}
+
+.btn-submit {
+    background-color: white;
+    color: black;
+}
+
 .msg {
     width: 40%;
     text-align: center;

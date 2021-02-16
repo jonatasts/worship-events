@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!--Node Modules CSS-->
+	<link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
 
     <!--Styles-->
