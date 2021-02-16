@@ -22,7 +22,7 @@
                 <div class="card-date">09/02/2021</div>
                 <h5 class="card-title">{{ $event->title }}</h5>
                 <p class="card-participants">X Participantes</p>
-                <a href="" class="btn btn-outline-warning btn-more ">Saber mais</a>
+                <a href="/events/{{$event->id}}" class="btn btn-outline-warning btn-more ">Saber mais</a>
             </div>
         </div>
         @endforeach
