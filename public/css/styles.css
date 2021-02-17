@@ -53,6 +53,16 @@ header {
     z-index: 999;
 }
 
+#info-container .already-joined-msg {
+    margin: 15px 0;
+    color: #004085;
+    background-color: #CCE5FF;
+    border: 1px solid #B8DAFF;
+    padding: 10px;
+    width: 280px;
+    font-weight: 700;
+}
+
 /*Navbar*/
 
 .navbar.navbar-expand-lg {
@@ -263,7 +273,7 @@ header {
 .img-preview {
     width: 100px;
     margin-top: 20px;
-  }
+}
 
 /*Footer*/
 
