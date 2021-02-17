@@ -12,9 +12,13 @@
       <div id="info-container" class="col-md-6">
         <h1>{{ $event->title }}</h1>
         <p class="event-city"><ion-icon name="location-outline"></ion-icon> {{ $event->city }}</p>
-        <p class="events-participants"><ion-icon name="people-outline"></ion-icon> X Participantes</p>
+        <p class="events-participants"><ion-icon name="people-outline"></ion-icon> {{ count($event->users) }} Participante(s)</p>
         <p class="event-owner"><ion-icon name="star-outline"></ion-icon>{{ $event_owner['name'] }}</p>
-        <a href="#" class="btn btn-warning" style="background-color: #F2A340" id="confirm-presence">Confirmar Presença</a>
+        <form action="/events/join/{{ $event->id }}" method="POST">
+          @csrf
+          <a href="/events/join/{{ $event->id }}" class="btn btn-warning" style="background-color: #F2A340" id="confirm-presence"
+            onclick="event.preventDefault();this.closest('form').submit();">Confirmar Presença</a>
+        </form>
 
         @if ($event->items)
           <h3>O evento conta com:</h3>

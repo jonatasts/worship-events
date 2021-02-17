@@ -75,12 +75,23 @@ class EventController extends Controller
 
         $events = $user->events;
 
-        return view('events.dashboard', ['events' => $events]);
+        $events_as_participant = $user->eventsAsParticipant;
+
+        return view('events.dashboard', [
+            'events' => $events,
+            'events_as_participant' => $events_as_participant
+        ]);
     }
 
     public function edit($id)
     {
+        $user = auth()->user();
+
         $event = Event::findOrFail($id);
+
+        if($user->id != $event->user_id) {
+            return redirect('/dashboard');
+        }
 
         return view('events.edit', ['event' => $event]);
     }
@@ -91,7 +102,7 @@ class EventController extends Controller
 
         if (!isset($data["items"]))
             $data["items"] = [];
-        
+
         // Image Upload
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
 
@@ -106,15 +117,26 @@ class EventController extends Controller
             $data['image'] = $imageName;
         }
 
-        $event = Event::findOrFail($request->id)->update($data);
+        Event::findOrFail($request->id)->update($data);
 
         return redirect('/dashboard')->with('success', 'Evento editado com sucesso!');
     }
 
     public function destroy($id)
     {
-        $event = Event::findOrFail($id)->delete();
+        Event::findOrFail($id)->delete();
 
         return redirect('/dashboard')->with('success', 'Evento excluído com sucesso!');
+    }
+
+    public function joinEvent($id)
+    {
+        $user = auth()->user();
+
+        $user->eventsAsParticipant()->attach($id);
+
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('success', 'Sua presença foi confirmada no evento <em>' . $event->title . '</em>');
     }
 }
