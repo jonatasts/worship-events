@@ -137,6 +137,17 @@ class EventController extends Controller
 
         $event = Event::findOrFail($id);
 
-        return redirect('/dashboard')->with('success', 'Sua presença foi confirmada no evento <em>' . $event->title . '</em>');
+        return redirect('/dashboard')->with('success', "Sua presença foi confirmada em: " . $event->title);
+    }
+
+    public function leaveEvent($id)
+    {
+        $user = auth()->user();
+
+        $user->eventsAsParticipant()->detach($id);
+
+        $event = Event::findOrFail($id);
+
+        return redirect('/dashboard')->with('success', "Sua presença foi removida de: " . $event->title);
     }
 }

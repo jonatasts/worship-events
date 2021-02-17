@@ -23,7 +23,7 @@
 
         <div class="form-group">
             <label for="date">Data</label>
-            <input type="date" class="form-control" id="date" name="date">
+            <input type="date" class="form-control field-create" id="date" name="date">
           </div>
 
         <div class="form-group">
