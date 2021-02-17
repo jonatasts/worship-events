@@ -4,7 +4,7 @@
 
 @section('content')
 <div id="search-container" class="col-md-12">
-    <h1>Busque por um evento gospel</h1>
+    <h1>Busque por um evento de adoração</h1>
     <form action="/" method="GET">
         @csrf
         <div class="input-group">
