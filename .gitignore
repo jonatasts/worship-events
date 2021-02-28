@@ -1,8 +1,8 @@
-node_modules/*
-/public/node_modules/*
+node_modules
+/public/node_modules
 /public/hot
 /public/storage
-/public/img/events
+/public/img/events/*
 /storage/*.key
 /vendor
 .env
